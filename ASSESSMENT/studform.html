@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="studform.css">
+  <link rel="icon" type="" href="resume.png">
+</head>
+
+<body>
+  <form>
+    <center><a href="#" style="color: red; font-family: sans-serif;">Student Registration Form</a></center>
+    <div class="mainform">
+
+      <!-- LABEL SECTION -->
+      <div class="lbl">
+        <label for="fname">First name :</label>
+        <label for="lname">Last name :</label>
+        <label for="email">Email :</label>
+        <label for="mobile">Mobile :</label>
+        <label for="text">Gender :</label>
+        <label for="text">Date of Birth :</label>
+        <label for="address">Address :</label>
+
+        <div class="lbl1">
+          <label for="city">City :</label>
+          <label for="pin">Area PIN :</label>
+          <label for="state">State :</label>
+          <label for="quli">Qualification :</label>
+          <label for="spl">Specialization :</label>
+          <br><br><br><br>
+          <label for="psw">Password :</label>
+        </div>
+        <!-- BUTTON DECLARATION -->
+        <button type="submit" class="registerbtn">Register</button>
+      </div>
+
+      <!-- INPUT SECTION -->
+      <div class="inpt"><input type="text" autofocus placeholder="Enter your first name" name="fname" id="fname"
+          required><br>
+        <input type="text" placeholder="Enter your last name" name="lname" id="lname" required><br>
+        <input type="email" placeholder="it should contain @." name="email" id="email" required><br>
+        <input type="tel" placeholder="only 10 digits are allowed" name="mobile" id="mobile" pattern="[0-9]{10}"
+          required><br>
+
+        <div class="gender">
+          <input class="lblrd" type="radio" name="rdgen1" id="rdgen1" value="" checked>
+          <label class="lblrd" for="rdgen">Male</label>
+          <input class="lblrd" type="radio" name="rdgen1" id="rdgen1" value="">
+          <label class="lblrd" for="rdgen">Female</label>
+        </div>
+
+        <input type="date" name="bdate" id="bdate" required><br>
+        <textarea name="address" rows="5" column=100 id="address" placeholder="Enter your full address"
+          required></textarea><br>
+        <input type="text" name="city" id="city" placeholder="Enter your city" required><br>
+        <input type="tel" placeholder="only 6 digits are allowed" name="pin" id="pin" pattern="[0-9]{6}" required><br>
+        <input type="text" name="state" id="state" placeholder="Enter your state" required><br>
+
+        <select name="quli" id="quli" style="margin-top:12px;" required>
+          <option value="" disabled selected required>Selection Qualification</Option>
+          <option value="">Graduate</option>
+          <option value="">12 th Pass</option>
+          <option value="">10 th Pass</option>
+        </select><br>
+
+        <div class="chkqly">
+          <div class="chkbox"><input type="checkbox"> <label for="">&nbsp; Computer Science </label></div>
+          <div class="chkbox"><input type="checkbox"> <label for="">&nbsp; Information Technology </label></div>
+          <div class="chkbox"><input type="checkbox"> <label for="">&nbsp; Computer Architecture </label></div>
+          <div class="chkbox"><input type="checkbox"> <label for="">&nbsp; Tele Communication </label></div>
+        </div>
+
+        <input type="password" placeholder="Enter Password" name="psw" id="psw"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must having at least one number and one uppercase and lowercase letter, and minimum 8 or more characters"
+          required><br>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
